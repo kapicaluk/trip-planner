@@ -42,7 +42,7 @@ const Restaurant = db.define('restaurant', {
         type: Sequelize.INTEGER
     },
     cuisine: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
     }
 });
 
@@ -55,8 +55,8 @@ const Activity = db.define('activity', {
     }
 });
 
-Place.belongsTo(Hotel);
-Place.belongsTo(Restaurant);
-Place.belongsTo(Activity);
+Hotel.hasMany(Place);
+Restaurant.hasMany(Place);
+Activity.hasMany(Place);
 
 module.exports = {db, Place, Hotel, Restaurant, Activity}
