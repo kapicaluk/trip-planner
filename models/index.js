@@ -4,7 +4,7 @@ const db = new Sequelize('postgres://localhost:5432/trip-planner', {
     logging: false,
 })
 
-const Place = db.define('page', {
+const Place = db.define('place', {
     address: {
         type: Sequelize.STRING
     },
@@ -22,7 +22,7 @@ const Place = db.define('page', {
     }
 })
 
-const Hotel = db.define('page', {
+const Hotel = db.define('hotel', {
   name: {
       type: Sequelize.STRING
   },
@@ -34,7 +34,7 @@ const Hotel = db.define('page', {
   }
 })
 
-const Restaurant = db.define('page', {
+const Restaurant = db.define('restaurant', {
 	name: {
         type: Sequelize.STRING
     },
@@ -46,7 +46,7 @@ const Restaurant = db.define('page', {
     }
 });
 
-const Activity = db.define('page', {
+const Activity = db.define('activity', {
 	name: {
         type: Sequelize.STRING
     },
