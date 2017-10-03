@@ -1,26 +1,19 @@
 {
-  "name": "trip-planner",
+  "name": "solution",
   "version": "1.0.0",
-  "description": "Modular Front-End Development workshop @ Fullstack Academy",
-  "main": "index.html",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -w"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kapicaluk/trip-planner.git"
+    "build": "webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kapicaluk/trip-planner/issues"
-  },
-  "homepage": "https://github.com/kapicaluk/trip-planner#readme",
-  "devDependencies": {
+  "dependencies": {
+    "mapbox-gl": "^0.40.1",
     "webpack": "^3.6.0"
   },
-  "dependencies": {
-    "mapbox-gl": "^0.40.1"
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
