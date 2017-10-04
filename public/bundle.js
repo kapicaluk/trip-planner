@@ -593,9 +593,9 @@ window.fetch("/api/attractions").then(function(res) {
           center: hotel.place.location,
           zoom: 12,
           speed: 0.4,
-          curve: 1,
+          curve: 10,
           easing(t) {
-            return t;
+            return t + 0.1;
           }
         });
         marker.addTo(map);
@@ -604,6 +604,7 @@ window.fetch("/api/attractions").then(function(res) {
     const button = document.createElement("button");
     button.setAttribute("id", "hotels-add");
     button.setAttribute("class", "options-btn");
+    button.classList.add("danger");
     button.innerHTML = "X";
     hotelsList.appendChild(button);
     button.addEventListener("click", function(event) {
@@ -636,6 +637,7 @@ window.fetch("/api/attractions").then(function(res) {
     const button = document.createElement("button");
     button.setAttribute("id", "restaurants-add");
     button.setAttribute("class", "options-btn");
+    button.classList.add("danger");
     button.innerHTML = "X";
     restaurantsList.appendChild(button);
     button.addEventListener("click", function(event) {
@@ -668,6 +670,7 @@ window.fetch("/api/attractions").then(function(res) {
     const button = document.createElement("button");
     button.setAttribute("id", "activities-add");
     button.setAttribute("class", "options-btn");
+    button.classList.add("danger");
     button.innerHTML = "X";
     activitiesList.appendChild(button);
     button.addEventListener("click", function(event) {

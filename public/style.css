@@ -91,6 +91,14 @@ select {
   color: #fff;
 }
 
+.options-btn.danger {
+  background: rgb(109, 35, 35);
+}
+
+.options-btn.danger:hover {
+  background: rgb(194, 10, 10);
+}
+
 .options-btn:hover {
   background: #4283aa;
 }
@@ -99,5 +107,8 @@ select {
   background: #286090;
 }
 
-
-
+li {
+  display: inline-block;
+  width: 80%;
+  margin-right: 10%;
+}
