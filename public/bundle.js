@@ -589,6 +589,10 @@ window.fetch("/api/attractions").then(function(res) {
     button.setAttribute("class", "options-btn");
     button.innerHTML = "X";
     hotelsList.appendChild(button);
+    button.addEventListener("click", function(event) {
+      hotelsList.removeChild(li);
+      hotelsList.removeChild(event.target);
+    })
   });
   restaurantsAdd.addEventListener("click", function(event) {
     const restaurantsList = document.getElementById("restaurants-list");
@@ -600,6 +604,10 @@ window.fetch("/api/attractions").then(function(res) {
     button.setAttribute("class", "options-btn");
     button.innerHTML = "X";
     restaurantsList.appendChild(button);
+    button.addEventListener("click", function(event) {
+      restaurantsList.removeChild(li);
+      restaurantsList.removeChild(event.target);
+    })
   });
   activitiesAdd.addEventListener("click", function(event) {
     const activitiesList = document.getElementById("activities-list");
