@@ -48,18 +48,45 @@ window.fetch("/api/attractions").then(function(res) {
     const li = document.createElement("li");
     li.innerHTML = hotelsSelectElement.value;
     hotelsList.appendChild(li);
+    const button = document.createElement("button");
+    button.setAttribute("id", "hotels-add");
+    button.setAttribute("class", "options-btn");
+    button.innerHTML = "X";
+    hotelsList.appendChild(button);
+    button.addEventListener("click", function(event) {
+      activitiesList.removeChild(li);
+      activitiesList.removeChild(event.target);
+    })
   });
   restaurantsAdd.addEventListener("click", function(event) {
     const restaurantsList = document.getElementById("restaurants-list");
     const li = document.createElement("li");
     li.innerHTML = restaurantsSelectElement.value;
     restaurantsList.appendChild(li);
+    const button = document.createElement("button");
+    button.setAttribute("id", "restaurants-add");
+    button.setAttribute("class", "options-btn");
+    button.innerHTML = "X";
+    restaurantsList.appendChild(button);
+    button.addEventListener("click", function(event) {
+      activitiesList.removeChild(li);
+      activitiesList.removeChild(event.target);
+    })
   });
   activitiesAdd.addEventListener("click", function(event) {
     const activitiesList = document.getElementById("activities-list");
     const li = document.createElement("li");
     li.innerHTML = activitiesSelectElement.value;
     activitiesList.appendChild(li);
+    const button = document.createElement("button");
+    button.setAttribute("id", "activities-add");
+    button.setAttribute("class", "options-btn");
+    button.innerHTML = "X";
+    activitiesList.appendChild(button);
+    button.addEventListener("click", function(event) {
+      activitiesList.removeChild(li);
+      activitiesList.removeChild(event.target);
+    })
   });
 }).catch(function(err) {
   console.log(err.message);
