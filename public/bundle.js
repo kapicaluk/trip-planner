@@ -590,8 +590,8 @@ window.fetch("/api/attractions").then(function(res) {
     button.innerHTML = "X";
     hotelsList.appendChild(button);
     button.addEventListener("click", function(event) {
-      activitiesList.removeChild(li);
-      activitiesList.removeChild(event.target);
+      hotelsList.removeChild(li);
+      hotelsList.removeChild(event.target);
     })
   });
   restaurantsAdd.addEventListener("click", function(event) {
@@ -605,8 +605,8 @@ window.fetch("/api/attractions").then(function(res) {
     button.innerHTML = "X";
     restaurantsList.appendChild(button);
     button.addEventListener("click", function(event) {
-      activitiesList.removeChild(li);
-      activitiesList.removeChild(event.target);
+      restaurantsList.removeChild(li);
+      restaurantsList.removeChild(event.target);
     })
   });
   activitiesAdd.addEventListener("click", function(event) {
