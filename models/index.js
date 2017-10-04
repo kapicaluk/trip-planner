@@ -55,8 +55,9 @@ const Activity = db.define('activity', {
     }
 });
 
-Hotel.hasMany(Place);
-Restaurant.hasMany(Place);
-Activity.hasMany(Place);
+
+Hotel.belongsTo(Place);
+Restaurant.belongsTo(Place);
+Activity.belongsTo(Place);
 
 module.exports = {db, Place, Hotel, Restaurant, Activity}
